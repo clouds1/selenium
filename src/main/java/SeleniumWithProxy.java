@@ -38,12 +38,12 @@ public class SeleniumWithProxy {
         proxy.setFtpProxy(proxyCredentials);
         proxy.setSslProxy(proxyCredentials);
 
-        capabilities.setCapability(CapabilityType.PROXY, proxy);
+        //capabilities.setCapability(CapabilityType.PROXY, proxy);
 
         // Set Selenium Hub URL
         URL hubUrl = null;
         try {
-            hubUrl = new URL("http://your.selenium.hub.url:your-hub-port/wd/hub");
+            hubUrl = new URL("http://localhost:4444/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
